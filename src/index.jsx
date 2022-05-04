@@ -6,13 +6,21 @@ import Movie from './components/Movie';
 
 import './style.css';
 
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
      <h1>Movies</h1>
 
-      <MovieList />
-    </>
+     <Routes>
+       <Route path="/" element={<MovieList />} />
+       <Route path="/" element={<Movie /> } />
+
+      
+
+      </Routes>
+    </BrowserRouter>
   );
 }
 
